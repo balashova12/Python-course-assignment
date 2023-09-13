@@ -11,11 +11,15 @@ def main() -> int:
     # password request needs to be added here
     password = input("Password: ")
     print("")
+    users = []
+    users.append(username)
 
     # Notes  screen 
     print("1. some text")
     print("2. ...")
     input("Selection: ")
+    for i in range(0, len(users)):
+        print(users[i])
 
     return(0)
 
