@@ -1,8 +1,7 @@
-username = input("Username: ")
-password = input("Password: ")
+import sys
 
-print("New user " + username + "registered")
-
-print("1.Create a note")
-print("2.Retrieve and read new notes")
-print("3.Delete note")
+user_accounts = {
+    "user1": "pass1",
+    "user2": "pass2",
+    "user3": "pass3",
+}
