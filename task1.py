@@ -12,3 +12,7 @@ def retrieve_notes(user):
 
 def delete_note(user):
     pass
+
+def main():
+    user = ""
+    while True:
