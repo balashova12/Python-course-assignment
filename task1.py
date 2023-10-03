@@ -17,7 +17,16 @@ def main():
     user = ""
     while True:
         if user == "":
-            pass
+            print("Welcome to the Note Taking App!")
+            username = input("Enter your username (or type 'exit' to quit): ")
+            if username == "exit":
+                break
+            password = input("Password: ")
+            if user_accounts.get(username) == password:
+                user = username
+                print("Welcome, " + user + "!")
+            else:
+                print("Invalid username or password. Please try again.")
         else:
             print("Options:")
             print("1. Create a new note")
