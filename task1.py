@@ -37,7 +37,7 @@ def delete_note(user):
     choice = input("Enter the number of the note you want to delete (0 to cancel): ")
     if choice.isdigit():
         index = int(choice) - 1
-        if 0 <= index < len(notes) and notes[index]["user"] == user:
+        if 0 <= index < len(notes):
             del notes[index]
             print("Note deleted successfully!")
         elif index == -1:
@@ -58,7 +58,7 @@ def main():
             password = getpass.getpass()
             if user_accounts.get(username) == password:
                 user = username
-                print("Welcome, " + user + "!")
+                print(f"Welcome, {user}!")
             else:
                 print("Invalid username or password. Please try again.")
         else:
