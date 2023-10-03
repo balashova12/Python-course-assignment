@@ -1,4 +1,5 @@
 import datetime
+import sys
 
 user_accounts = {
     "user1": "pass1",
@@ -76,3 +77,6 @@ def main():
                 user = ""
             else:
                 print("Invalid choice. Please try again.")
+
+if __name__ == '__main__':
+    sys.exit(main())
