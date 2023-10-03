@@ -20,12 +20,13 @@ def create_note(user):
 
 def retrieve_notes(user):
     print(f"Notes for {user}:")
+    print()
+    headers = ["Date", "Subject", "Note Text"]
+    print(f"{headers[0]:<20} {headers[1]:<20} {headers[2]}")
+    print("--- --- --- --- ---")
     for note in notes:
         if note["user"] == user:
-            print(f"Date: {note['date']}")
-            print(f"Subject: {note['subject']}")
-            print(f"Note Text: {note['note_text']}")
-            print()
+            print(f"{note['date']:<20} {note['subject']:<20} {note['note_text']}")
 
 def delete_note(user):
     print("Your notes:")
