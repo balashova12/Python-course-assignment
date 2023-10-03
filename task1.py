@@ -1,11 +1,20 @@
+import datetime
+
 user_accounts = {
     "user1": "pass1",
     "user2": "pass2",
     "user3": "pass3",
 }
 
+notes = []
+
 def create_note(user):
-    pass
+    subject = input("Enter note subject: ")
+    note_text = input("Enter note text: ")
+    date = datetime.datetime.now()
+    note = {"user": user, "date": date, "subject": subject, "note_text": note_text}
+    notes.append(note)
+    print("Note created successfully!")
 
 def retrieve_notes(user):
     pass
