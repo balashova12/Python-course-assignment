@@ -26,7 +26,23 @@ def retrieve_notes(user):
             print()
 
 def delete_note(user):
-    pass
+    print("Your notes:")
+    for i, note in enumerate(notes):
+        if note["user"] == user:
+            print(f"{i + 1}. {note['subject']} - {note['date']}")
+    
+    choice = input("Enter the number of the note you want to delete (0 to cancel): ")
+    if choice.isdigit():
+        index = int(choice) - 1
+        if 0 <= index < len(notes) and notes[index]["user"] == user:
+            del notes[index]
+            print("Note deleted successfully!")
+        elif index == -1:
+            print("Deletion canceled.")
+        else:
+            print("Invalid note number.")
+    else:
+        print("Invalid input.")
 
 def main():
     user = ""
