@@ -17,7 +17,13 @@ def create_note(user):
     print("Note created successfully!")
 
 def retrieve_notes(user):
-    pass
+    print(f"Notes for {user}:")
+    for note in notes:
+        if note["user"] == user:
+            print(f"Date: {note['date']}")
+            print(f"Subject: {note['subject']}")
+            print(f"Note Text: {note['note_text']}")
+            print()
 
 def delete_note(user):
     pass
