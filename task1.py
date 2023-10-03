@@ -1,5 +1,6 @@
 import datetime
 import sys
+import getpass
 
 user_accounts = {
     "user1": "pass1",
@@ -12,7 +13,7 @@ notes = []
 def create_note(user):
     subject = input("Enter note subject: ")
     note_text = input("Enter note text: ")
-    date = datetime.datetime.now()
+    date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     note = {"user": user, "date": date, "subject": subject, "note_text": note_text}
     notes.append(note)
     print("Note created successfully!")
@@ -53,7 +54,7 @@ def main():
             username = input("Enter your username (or type 'exit' to quit): ")
             if username == "exit":
                 break
-            password = input("Password: ")
+            password = getpass.getpass()
             if user_accounts.get(username) == password:
                 user = username
                 print("Welcome, " + user + "!")
