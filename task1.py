@@ -72,8 +72,9 @@ def main():
             print("Options:")
             print("1. Create a new note")
             print("2. Retrieve and read notes")
-            print("3. Delete a note")
-            print("4. Logout")
+            print("3. Search for a note")
+            print("4. Delete a note")
+            print("5. Logout")
             choice = input("Enter your choice: ")
 
             if choice == "1":
@@ -81,8 +82,10 @@ def main():
             elif choice == "2":
                 retrieve_notes(user)
             elif choice == "3":
-                delete_note(user)
+                search_note(user)
             elif choice == "4":
+                delete_note(user)
+            elif choice == "5":
                 user = ""
             else:
                 print("Invalid choice. Please try again.")
