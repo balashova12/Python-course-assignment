@@ -32,8 +32,11 @@ def retrieve_notes(user):
 def search_note(user):
     subj = input("Enter the subject of the note you are searching for: ")
     for note in notes:
-        if note["user"] == user & note["subject"] == str(subj):
+        if note["user"] == user:
+            if note["subject"] == str(subj):
                 print(f"{note['user']} - {note['subject']} - {note['notte_text']} - {note['date']}")
+            else:
+                print("There is no note with this subject.")
 
 def delete_note(user):
     print("Your notes:")
