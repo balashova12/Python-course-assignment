@@ -17,6 +17,7 @@ def create_note(user):
     date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     note = {"user": user, "date": date, "subject": subject, "note_text": note_text}
     notes.append(note)
+    subject.append(subject)
     print("Note created successfully!")
 
 def retrieve_notes(user):
