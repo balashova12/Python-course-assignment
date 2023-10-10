@@ -17,7 +17,7 @@ def create_note(user):
     date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     note = {"user": user, "date": date, "subject": subject, "note_text": note_text}
     notes.append(note)
-    subject.append(subject)
+    subjects.append(subject)
     print("Note created successfully!")
 
 def retrieve_notes(user):
@@ -42,6 +42,7 @@ def search_note(user):
                 num += 1
             elif subj not in subjects:
                 print("There is no notes with this subject.")
+                break
     print()
 
 def delete_note(user):
