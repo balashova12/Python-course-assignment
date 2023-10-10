@@ -9,6 +9,7 @@ user_accounts = {
 }
 
 notes = []
+subjects = []
 
 def create_note(user):
     subject = input("Enter note subject: ")
@@ -16,7 +17,6 @@ def create_note(user):
     date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     note = {"user": user, "date": date, "subject": subject, "note_text": note_text}
     notes.append(note)
-    subjects.append(subject)
     print("Note created successfully!")
 
 def retrieve_notes(user):
@@ -39,7 +39,7 @@ def search_note(user):
             if note["subject"] == str(subj):
                 print(f"{note['user']} - {note['subject']} - {note['note_text']} - {note['date']}")
                 num += 1
-            elif num == 0:
+            elif subj not in subjects:
                 print("There is no notes with this subject.")
     print()
 
