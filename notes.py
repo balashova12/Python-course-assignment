@@ -8,12 +8,7 @@ import sqliteauthenticate as authenticate
 import sqlitedatabase as database
 import fetchwebtitle
 import jsonnotes
-
-user_accounts = {
-    "user1": "pass1",
-    "user2": "pass2",
-    "user3": "pass3",
-}
+## import insertnoteuser
 
 # main function
 def main() -> int:
@@ -23,19 +18,14 @@ def main() -> int:
         userid = -1
 
         # Login loop
-        while (userid == -1):
-            print("\nLogin or just press enter to exit the application.\n")
-            username = input("Username: ")
-            # Exit main function and application if username is empty
-            if (username == ""):
-                return 0
-            password = getpass.getpass()
-            ## userid = authenticate.authenticate(username, password)
-            if user_accounts.get(username) == password:
-                user = username
-                print(f"Welcome, {user}!")
-            else:
-                print("Invalid username or password. Please try again.")
+        ## while (userid == -1):        
+        print("\nLogin or just press enter to exit the application.\n")
+        username = input("Username: ")
+        # Exit main function and application if username is empty
+        if (username == ""):
+            return 0
+        password = getpass.getpass("Password: ")
+        userid = authenticate.authenticate(username, password)
 
         # Empty line
         print()
