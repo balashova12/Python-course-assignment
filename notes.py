@@ -30,7 +30,12 @@ def main() -> int:
             if (username == ""):
                 return 0
             password = getpass.getpass()
-            userid = authenticate.authenticate(username, password)
+            ## userid = authenticate.authenticate(username, password)
+            if user_accounts.get(username) == password:
+                user = username
+                print(f"Welcome, {user}!")
+            else:
+                print("Invalid username or password. Please try again.")
 
         # Empty line
         print()
