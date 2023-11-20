@@ -9,6 +9,12 @@ import sqlitedatabase as database
 import fetchwebtitle
 import jsonnotes
 
+user_accounts = {
+    "user1": "pass1",
+    "user2": "pass2",
+    "user3": "pass3",
+}
+
 # main function
 def main() -> int:
     # Main loop will run as long as username is not empty.
