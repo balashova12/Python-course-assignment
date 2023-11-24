@@ -45,7 +45,6 @@ def main() -> int:
 
             # Create a new note
             if choice == 1:
-                # Ask for details
                 subject = input("Subject: ")
                 text = input("Text: ")
                 url = input("Web page (with 'https://' part): ")
