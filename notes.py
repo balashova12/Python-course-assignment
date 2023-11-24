@@ -17,8 +17,7 @@ def main() -> int:
         # userid is set initially to -1. In this app it means that user is not authenticated.
         userid = -1
 
-        # Login loop
-        ## while (userid == -1):        
+        # Login      
         print("\nLogin or just press enter to exit the application.\n")
         username = input("Username: ")
         # Exit main function and application if username is empty
@@ -27,12 +26,11 @@ def main() -> int:
         password = getpass.getpass("Password: ")
         userid = authenticate.authenticate(username, password)
 
-        # Empty line
-        print()
-
         # Main menu
         onmainmenu = True
         while (onmainmenu):
+            # Empty line
+            print()
             print("Main menu:")
             print("1. Create a note")
             print("2. Retrieve notes")
@@ -50,7 +48,7 @@ def main() -> int:
                 # Ask for details
                 subject = input("Subject: ")
                 text = input("Text: ")
-                url = input("Web page: ")
+                url = input("Web page (with 'https://' part): ")
 
                 # Initially result is set to -1
                 result = -1
