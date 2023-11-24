@@ -78,22 +78,13 @@ def main() -> int:
 
                 if ((selectednote < len(usernotes)) and (selectednote >= 0)):
                     note = database.notedetails(usernotes[selectednote])
-                    #print("--- --- ---")
-                    #print("Subject: " + note["subject"])
-                    #print("Date: " + str(note["date"]))
-                    #print("Text: " + note["text"])
-                    #print("Web page: " + note["url"])
-                    #print("Web title: " + fetchwebtitle.fetchtitle(note["url"]))
-                    #print("--- --- ---")
-
-                    print()
-                    headers = ["Subject", "Date", "Text", "Web page", "Web title"]
-                    print(f"{headers[0]:<20} {headers[1]:<20} {headers[2]:<20} {headers[3]:<30} {headers[4]:<30}")
-                    print("--- --- --- --- ---")
-                    for note in usernotes:
-                        print(f"{note['subject']:<20} {str(note['date']):<20} {note['text']:<20} {note['url']:<30} {fetchwebtitle.fetchtitle(note['url']):<30}")
-                    print()
-
+                    print("--- --- ---")
+                    print("Subject: " + note["subject"])
+                    print("Date: " + str(note["date"]))
+                    print("Text: " + note["text"])
+                    print("Web page: " + note["url"])
+                    print("Web title: " + fetchwebtitle.fetchtitle(note["url"]))
+                    print("--- --- ---")
                     # One new menu loop that is used to delete menu item
                     choice = input("Type \"Delete\" to delete this note or press enter to go back: ")
 
