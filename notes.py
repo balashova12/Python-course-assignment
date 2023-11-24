@@ -65,7 +65,7 @@ def main() -> int:
                 # List number
                 number = 0
 
-                # Fetch details of each note and show them in menu
+                # Fetch details of each note and show them in the menu
                 for n in usernotes:
                     print(str(number) + ". " + database.notedetails(n)["subject"])
                     number += 1
