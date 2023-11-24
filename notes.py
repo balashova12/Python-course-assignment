@@ -25,6 +25,8 @@ def main() -> int:
             return 0
         password = getpass.getpass("Password: ")
         userid = authenticate.authenticate(username, password)
+        # Get the current user's ID
+        current_user_id = userid
 
         # Main menu
         onmainmenu = True
@@ -59,7 +61,7 @@ def main() -> int:
             # List notes of current user and open a new menu to access them
             elif choice == 2:
                 # Request list of notes
-                usernotes = database.listusernotes(userid)
+                usernotes = database.listusernotes(current_user_id)
 
                 # List number
                 number = 0
