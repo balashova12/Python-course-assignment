@@ -59,14 +59,14 @@ def main() -> int:
             # List notes of current user and open a new menu to access them
             elif choice == 2:
                 # Request list of notes
-                usernotes = database.listusernotes(current_user_id)
+                usernotes = database.listusernotes(userid)
 
                 # List number
                 number = 0
 
                 # Fetch details of each note and show them in the menu
                 for n in usernotes:
-                    print(str(number) + ". " + database.notedetails(n)["subject"])
+                    print(str(number) + " - " + username + ". " + database.notedetails(n)["subject"])
                     number += 1
                 
                 # Show details of one note and show note specific menu
@@ -80,7 +80,7 @@ def main() -> int:
                     note = database.notedetails(usernotes[selectednote])
                     print()
                     print("--- --- ---")
-                    print("User id: " + note["userid"])
+                    print("User id: " + username)
                     print("Subject: " + note["subject"])
                     print("Date: " + str(note["date"]))
                     print("Text: " + note["text"])
