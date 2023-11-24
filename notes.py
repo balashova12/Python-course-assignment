@@ -17,7 +17,7 @@ def main() -> int:
         # userid is set initially to -1. In this app it means that user is not authenticated.
         userid = -1
 
-        # Login      
+        # Login  
         print("\nLogin or just press enter to exit the application.\n")
         username = input("Username: ")
         # Exit main function and application if username is empty
@@ -25,8 +25,6 @@ def main() -> int:
             return 0
         password = getpass.getpass("Password: ")
         userid = authenticate.authenticate(username, password)
-        # Get the current user's ID
-        current_user_id = userid
 
         # Main menu
         onmainmenu = True
@@ -82,6 +80,7 @@ def main() -> int:
                     note = database.notedetails(usernotes[selectednote])
                     print()
                     print("--- --- ---")
+                    print("User id: " + note["userid"])
                     print("Subject: " + note["subject"])
                     print("Date: " + str(note["date"]))
                     print("Text: " + note["text"])
