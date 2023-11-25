@@ -88,7 +88,7 @@ def main() -> int:
                     print("--- --- ---")
                     print()
                     # One new menu loop that is used to delete menu item
-                    choice = input("Type \"Delete\" to delete this note or press enter to go back: ")
+                    choice = input("Type \"delete\" to delete this note or press enter to go back: ")
 
                     if (choice == "Delete"):
                         database.deletenote(usernotes[int(selectednote)])
