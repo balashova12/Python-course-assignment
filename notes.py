@@ -66,7 +66,7 @@ def main() -> int:
 
                 # Fetch details of each note and show them in the menu
                 for n in usernotes:
-                    print(str(number) + " - " + username + ". " + database.notedetails(n)["subject"])
+                    print(str(number) + ". " + database.notedetails(n)["subject"])
                     number += 1
                 
                 # Show details of one note and show note specific menu
