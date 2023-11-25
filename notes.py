@@ -80,7 +80,6 @@ def main() -> int:
                     note = database.notedetails(usernotes[selectednote])
                     print()
                     print("--- --- ---")
-                    print("User id: " + username)
                     print("Subject: " + note["subject"])
                     print("Date: " + str(note["date"]))
                     print("Text: " + note["text"])
